@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{stdout, Write};
 use curl::easy::Easy;
-use std::env
+use std::env;
 use std::process::exit;
 
 fn write() {
