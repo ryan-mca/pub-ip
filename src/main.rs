@@ -60,6 +60,6 @@ fn main() {
     }
 
     if command == "-w" {
-        write()
+        write();
     }
 }
