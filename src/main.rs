@@ -76,15 +76,31 @@ fn main() {
         print()
     }
 
+    if command == "--printv6" {
+        printv6()
+    }
+
     if command == "-p" {
         print()
+    }
+
+    if command == "-p6" {
+        printv6()
     }
 
     if command == "--write" {
         write()
     }
 
+    if command == "--writev6" {
+        writev6()
+    }
+
     if command == "-w" {
         write();
+    }
+
+    if command == "-w6" {
+        writev6()
     }
 }
