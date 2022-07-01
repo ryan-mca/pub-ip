@@ -90,7 +90,7 @@ fn main() {
         printv6()
     }
 
-    if command == "--write" {
+    if command == "--writev4" {
         write()
     }
 
