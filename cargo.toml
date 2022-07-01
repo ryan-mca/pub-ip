@@ -1,2 +1,13 @@
+[package]
+name = "pub-ip"
+version = "1.0.0"
+authors = ["Ryan"]
+edition = '2021'
+description = "A quick rust script to print or write your public IPv4 address"
+readme = "README.md"
+repository = "https://github.com/FIRED3STROYER/pub-ip"
+license = "GPLv2"
+license-file = "LICENSE.txt"
+
 [dependencies]
 curl = "0.4.43"
