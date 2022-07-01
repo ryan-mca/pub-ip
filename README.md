@@ -43,4 +43,4 @@ cargo install --path .
 ```
 On linux this will install to ~/.cargo/bin/pub-ip
 
-On windows this will install to C:\Users\{user}\.cargo\bin\pub-ip.exe
+On windows this will install to C:\Users\user\.cargo\bin\pub-ip.exe
