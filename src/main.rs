@@ -5,7 +5,7 @@ use std::env;
 use std::process::exit;
 
 fn write() {
-    let mut file = File::create(pub-ip.txt)
+    let mut file = File::create("pub-ip.txt")
         .expect("Could not create file");
     let mut easy = Easy::new();
 
