@@ -28,3 +28,9 @@ fn print() {
     easy.perform().unwrap();
     exit(0);
 }
+
+fn help() {
+    println!("Usage:    --help  |   -h  =  Prints this help message");
+    println!("          --print |   -p  =  Prints your IPv4 address to stdout");
+    println!("          --write |   -w  =  Writes your IPv4 address to 'pub-ip.txt'");
+}
