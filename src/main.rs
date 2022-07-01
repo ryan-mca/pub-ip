@@ -43,6 +43,17 @@ fn print() {
     exit(0);
 }
 
+fn printv6 () {
+    let mut easy = Easy::new();
+    easy.url("ipv4.icanhazip.com").unwrap();
+    easy.write_function(|data| {
+        stdout().write_all(data).unwrap();
+        Ok(data.len())
+    }).unwrap();
+    easy.perform().unwrap();
+    exit(0); 
+}
+
 fn help() {
     println!("Usage:    --help  |   -h  =  Prints this help message");
     println!("          --print |   -p  =  Prints your IPv4 address to stdout");
