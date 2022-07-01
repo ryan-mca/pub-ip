@@ -74,7 +74,7 @@ fn main() {
         help()
     }
 
-    if command == "--print" {
+    if command == "--printv4" {
         printv4()
     }
 
@@ -82,7 +82,7 @@ fn main() {
         printv6()
     }
 
-    if command == "-p" {
+    if command == "-p4" {
         printv4()
     }
 
@@ -98,7 +98,7 @@ fn main() {
         writev6()
     }
 
-    if command == "-w" {
+    if command == "-w4" {
         writev4();
     }
 
