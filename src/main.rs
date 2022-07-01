@@ -55,11 +55,11 @@ fn printv6 () {
 }
 
 fn help() {
-    println!("Usage:    --help      |   -h  =   Prints this help message");
-    println!("          --print     |   -p  =   Prints your IPv4 address to stdout");
-    println!("          --printv6   |   -p6 =   Prints your IPv6 address to stdout");
-    println!("          --write     |   -w  =   Writes your IPv4 address to 'pub-ipv4.txt'");
-    println!("          --writev6   |   -w6 =   Writes your IPv6 address to 'pub-ipv6.txt'")
+    println!("Usage:    --help          |   -h  =   Prints this help message");
+    println!("          --printv4       |   -p  =   Prints your IPv4 address to stdout");
+    println!("          --printv6       |   -p6 =   Prints your IPv6 address to stdout");
+    println!("          --writev4       |   -w  =   Writes your IPv4 address to 'pub-ipv4.txt'");
+    println!("          --writev6       |   -w6 =   Writes your IPv6 address to 'pub-ipv6.txt'")
 }
 
 fn main() {
