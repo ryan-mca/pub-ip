@@ -34,3 +34,32 @@ fn help() {
     println!("          --print |   -p  =  Prints your IPv4 address to stdout");
     println!("          --write |   -w  =  Writes your IPv4 address to 'pub-ip.txt'");
 }
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+    let command = args[1].clone();
+
+    if command == "--help" {
+        help()
+    }
+
+    if command == "-h" {
+        help()
+    }
+
+    if command == "--print" {
+        print()
+    }
+
+    if command == "-p" {
+        print()
+    }
+
+    if command == "--write" {
+        write()
+    }
+
+    if command == "-w" {
+        write()
+    }
+}
