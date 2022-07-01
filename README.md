@@ -1,5 +1,5 @@
 # pub-ip
-A quick rust script to print or write you public IPv4 address
+A quick rust script to print or write your public IPv4 or IPv6 address
 
 ## Commands
   --help    | -h  = print this help message
