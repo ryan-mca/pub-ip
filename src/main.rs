@@ -32,7 +32,7 @@ fn writev6() {
     exit(0);
 }
 
-fn print() {
+fn printv4() {
     let mut easy = Easy::new();
     easy.url("ipv4.icanhazip.com").unwrap();
     easy.write_function(|data| {
@@ -75,7 +75,7 @@ fn main() {
     }
 
     if command == "--print" {
-        print()
+        printv4()
     }
 
     if command == "--printv6" {
@@ -83,7 +83,7 @@ fn main() {
     }
 
     if command == "-p" {
-        print()
+        printv4()
     }
 
     if command == "-p6" {
@@ -91,7 +91,7 @@ fn main() {
     }
 
     if command == "--writev4" {
-        write()
+        writev4()
     }
 
     if command == "--writev6" {
@@ -99,7 +99,7 @@ fn main() {
     }
 
     if command == "-w" {
-        write();
+        writev4();
     }
 
     if command == "-w6" {
