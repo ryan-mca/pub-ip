@@ -1,0 +1,2 @@
+[dependencies]
+curl = "0.4.43"
