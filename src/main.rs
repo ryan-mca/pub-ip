@@ -45,7 +45,7 @@ fn printv4() {
 
 fn printv6 () {
     let mut easy = Easy::new();
-    easy.url("ipv4.icanhazip.com").unwrap();
+    easy.url("ipv6.icanhazip.com").unwrap();
     easy.write_function(|data| {
         stdout().write_all(data).unwrap();
         Ok(data.len())
