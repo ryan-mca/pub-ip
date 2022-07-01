@@ -5,7 +5,7 @@ use std::env;
 use std::process::exit;
 
 fn writev4() {
-    let mut file = File::create("pub-ip.txt")
+    let mut file = File::create("pub-ipv4.txt")
         .expect("Could not create file");
     let mut easy = Easy::new();
 
@@ -19,7 +19,7 @@ fn writev4() {
 }
 
 fn writev6() {
-    let mut file = File::create("pub-ip.txt")
+    let mut file = File::create("pub-ipv6.txt")
         .expect("Could not create file");
     let mut easy = Easy::new();
 
@@ -55,9 +55,11 @@ fn printv6 () {
 }
 
 fn help() {
-    println!("Usage:    --help  |   -h  =  Prints this help message");
-    println!("          --print |   -p  =  Prints your IPv4 address to stdout");
-    println!("          --write |   -w  =  Writes your IPv4 address to 'pub-ip.txt'");
+    println!("Usage:    --help      |   -h  =   Prints this help message");
+    println!("          --print     |   -p  =   Prints your IPv4 address to stdout");
+    println!("          --printv6   |   -p6 =   Prints your IPv6 address to stdout");
+    println!("          --write     |   -w  =   Writes your IPv4 address to 'pub-ipv4.txt'");
+    println!("          --writev6   |   -w6 =   Writes your IPv6 address to 'pub-ipv6.txt'")
 }
 
 fn main() {
