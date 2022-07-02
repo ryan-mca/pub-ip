@@ -4,7 +4,7 @@ use curl::easy::Easy;
 use std::env;
 use std::process::exit;
 
-use clap::{Arg, App};
+use clap::{Parser, Arg, App};
 
 fn writev4() {
     let mut file = File::create("pub-ipv4.txt")
