@@ -67,7 +67,6 @@ fn main() {
 
     let printv4_arg = Arg::with_name("printv4")
     .long("printv4")
-    .short("p4")
     .takes_value(false)
     .help("Prints the users IPv4 address using 'ipv4.icanhazip.com'")
     .required(false);
@@ -80,27 +79,11 @@ fn main() {
         printv6()
     }
 
-    if command == "-p4" {
-        printv4()
-    }
-
-    if command == "-p6" {
-        printv6()
-    }
-
     if command == "--writev4" {
         writev4()
     }
 
     if command == "--writev6" {
-        writev6()
-    }
-
-    if command == "-w4" {
-        writev4();
-    }
-
-    if command == "-w6" {
         writev6()
     }
 }
