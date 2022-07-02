@@ -4,7 +4,15 @@ use curl::easy::Easy;
 use std::env;
 use std::process::exit;
 
-use clap::{Parser, Arg, App};
+use clap::{Parser, Arg, App, value_parser};
+
+#[derive(Parser, Debug)]
+#[clap(version, about)]
+struct Args {
+    /// Allows the user to input their own server
+    #[clap(short, long, value_parser)]
+    server: String
+}
 
 fn writev4() {
     let mut file = File::create("pub-ipv4.txt")
