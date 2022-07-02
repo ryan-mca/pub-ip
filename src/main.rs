@@ -11,23 +11,7 @@ use clap::Parser;
 struct Args {
     /// Allows the user to input their own server
     #[clap(short, long, value_parser)]
-    server: String,
-
-    /// Prints the users IPv4 address
-    #[clap(long)]
-    printv4: String,
-
-    /// Prints the users IPv6 address
-    #[clap(long)]
-    printv6: String,
-
-    /// Writes the users IPv4 address to pub-ip.txt
-    #[clap(long)]
-    writev4: String,
-
-    /// Prints the users IPv6 address to pub-ip.txt
-    #[clap(long)]
-    writev6: String,
+    server: String
 }
 
 fn writev4() {

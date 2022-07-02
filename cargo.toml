@@ -1,6 +1,6 @@
 [package]
 name = "pub-ip"
-version = "1.0.0"
+version = "1.5.0"
 authors = ["Ryan"]
 edition = '2021'
 description = "A quick rust script to print or write your public IPv4 address"
