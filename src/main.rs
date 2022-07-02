@@ -60,6 +60,12 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     let command = args[1].clone();
 
+    let app = App::new("pub-ip")
+    .version("v2")
+    .about("A quick rust script to print or write you public IPv4 or IPv6 address")
+    .author("Ryan McAlpine (https://github.com/FIRED3STROYER)");
+
+
     if command == "--printv4" {
         printv4()
     }
