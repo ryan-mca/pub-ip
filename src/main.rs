@@ -65,6 +65,12 @@ fn main() {
     .about("A quick rust script to print or write you public IPv4 or IPv6 address")
     .author("Ryan McAlpine (https://github.com/FIRED3STROYER)");
 
+    let printv4_arg = Arg::with_name("printv4")
+    .long("printv4")
+    .short("p4")
+    .takes_value(false)
+    .help("Prints the users IPv4 address using 'ipv4.icanhazip.com'")
+    .required(false);
 
     if command == "--printv4" {
         printv4()
