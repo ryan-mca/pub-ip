@@ -4,7 +4,7 @@ use curl::easy::Easy;
 use std::env;
 use std::process::exit;
 
-use clap::{Parser, Arg, App, value_parser};
+use clap::Parser;
 
 #[derive(Parser, Debug)]
 #[clap(version, about)]
