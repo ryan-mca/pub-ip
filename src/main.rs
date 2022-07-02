@@ -11,7 +11,23 @@ use clap::{Parser, Arg, App, value_parser};
 struct Args {
     /// Allows the user to input their own server
     #[clap(short, long, value_parser)]
-    server: String
+    server: String,
+
+    /// Prints the users IPv4 address
+    #[clap(long)]
+    printv4: String,
+
+    /// Prints the users IPv6 address
+    #[clap(long)]
+    printv6: String,
+
+    /// Writes the users IPv4 address to pub-ip.txt
+    #[clap(long)]
+    writev4: String,
+
+    /// Prints the users IPv6 address to pub-ip.txt
+    #[clap(long)]
+    writev6: String,
 }
 
 fn writev4() {
@@ -68,16 +84,16 @@ fn main() {
     let args: Vec<String> = env::args().collect();
     let command = args[1].clone();
 
-    let app = App::new("pub-ip")
-    .version("v2")
-    .about("A quick rust script to print or write you public IPv4 or IPv6 address")
-    .author("Ryan McAlpine (https://github.com/FIRED3STROYER)");
+    // let app = App::new("pub-ip")
+    // .version("v2")
+    // .about("A quick rust script to print or write you public IPv4 or IPv6 address")
+    // .author("Ryan McAlpine (https://github.com/FIRED3STROYER)");
 
-    let printv4_arg = Arg::with_name("printv4")
-    .long("printv4")
-    .takes_value(false)
-    .help("Prints the users IPv4 address using 'ipv4.icanhazip.com'")
-    .required(false);
+    // let printv4_arg = Arg::with_name("printv4")
+    // .long("printv4")
+    // .takes_value(false)
+    // .help("Prints the users IPv4 address using 'ipv4.icanhazip.com'")
+    // .required(false);
 
     if command == "--printv4" {
         printv4()
@@ -93,5 +109,18 @@ fn main() {
 
     if command == "--writev6" {
         writev6()
+    }
+
+    let clap_args = Args::parse();
+
+    loop {
+        let mut easy = Easy::new();
+        easy.url(&clap_args.server).unwrap();
+        easy.write_function(|data| {
+            stdout().write_all(data).unwrap();
+            Ok(data.len())
+        }).unwrap();
+        easy.perform().unwrap();
+        exit(0);
     }
 }
