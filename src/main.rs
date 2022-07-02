@@ -54,25 +54,25 @@ fn printv6 () {
     exit(0); 
 }
 
-fn help() {
-    println!("Usage:    --help          |   -h      =   Prints this help message");
-    println!("          --printv4       |   -p4     =   Prints your IPv4 address to stdout");
-    println!("          --printv6       |   -p6     =   Prints your IPv6 address to stdout");
-    println!("          --writev4       |   -w4     =   Writes your IPv4 address to 'pub-ipv4.txt'");
-    println!("          --writev6       |   -w6     =   Writes your IPv6 address to 'pub-ipv6.txt'")
-}
+// fn help() {
+//     println!("Usage:    --help          |   -h      =   Prints this help message");
+//     println!("          --printv4       |   -p4     =   Prints your IPv4 address to stdout");
+//     println!("          --printv6       |   -p6     =   Prints your IPv6 address to stdout");
+//     println!("          --writev4       |   -w4     =   Writes your IPv4 address to 'pub-ipv4.txt'");
+//     println!("          --writev6       |   -w6     =   Writes your IPv6 address to 'pub-ipv6.txt'")
+// }
 
 fn main() {
     let args: Vec<String> = env::args().collect();
     let command = args[1].clone();
 
-    if command == "--help" {
-        help()
-    }
+    // if command == "--help" {
+    //     help()
+    // }
 
-    if command == "-h" {
-        help()
-    }
+    // if command == "-h" {
+    //     help()
+    // }
 
     if command == "--printv4" {
         printv4()
